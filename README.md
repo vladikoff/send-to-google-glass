@@ -15,6 +15,8 @@ Features include:
 ****
 
 ![](http://v14d.com/send-to-glass-screen.png)
+### Example Cards:
+![](http://v14d.com/i/51c5899cd4a0a.jpg)
 
 ## Developer Setup
 
