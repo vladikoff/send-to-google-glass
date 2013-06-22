@@ -1,23 +1,23 @@
 {
-    "name": "__MSG_appName__",
-    "version": "0.0.1",
-    "manifest_version": 2,
-    "description": "__MSG_appDescription__",
-    "permissions": [
-      "contextMenus",
-      "https://accounts.google.com/o/oauth2/token",
-      "https://www.googleapis.com/"
-    ],
-    "icons": {
-        "16": "images/icon-16.png",
-        "128": "images/icon-128.png"
-    },
-    "default_locale": "en",
-    "background": {
-        "scripts": [
-            "scripts/background.js"
-        ]
-    },
+  "name": "__MSG_appName__",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "permissions": [
+    "contextMenus",
+    "https://accounts.google.com/o/oauth2/token",
+    "https://www.googleapis.com/"
+  ],
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
   "browser_action": {
     "default_icon": {
       "19": "images/icon-19.png",
@@ -27,20 +27,6 @@
     "default_popup": "popup.html"
   },
   "content_scripts": [
-    {
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "css": [
-        "styles/main.css"
-      ],
-      "js": [
-        "scripts/contentscript.js"
-      ],
-      "run_at": "document_end",
-      "all_frames": false
-    },
     {
       "matches": ["http://www.google.com/robots.txt*"],
       "js": ["oauth2/oauth2_inject.js"],

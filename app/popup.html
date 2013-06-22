@@ -1,15 +1,93 @@
 <!doctype html>
 <html>
-    <head>
-      <script src="/oauth2/oauth2.js"></script>
-        <link href="styles/main.css" rel="stylesheet">
-    </head>
-    <body>
+<head>
+  <script src='/oauth2/oauth2.js'></script>
+  <link href='styles/main.css' rel='stylesheet'>
+  <style>
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto Regular'), local('Roboto-Regular'), url(Roboto.woff) format('woff');
+    }
 
-      <button id="authorize">Authorize</button>
+    * {
+      font-family: Roboto, Arial, sans-serif;
+      border: none;
+      background: none;
+      color: #737374;
+    }
 
-      <!-- build:js scripts/popup.js -->
-      <script src="scripts/popup.js"></script>
-      <!-- endbuild -->
-    </body>
+    input {
+      outline: 0;
+      border: 1px solid #aaaaab;
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover, button:hover {
+      cursor: pointer;
+      color: #050017;
+    }
+
+    body {
+      width: 270px;
+      height: 90px;
+    }
+
+    h1 {
+      font-size: 16px;
+    }
+
+    fieldset {
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    #help {
+      position: absolute;
+      bottom: 5px;
+      width: 25px;
+      height: 25px;
+      font-size: 15px;
+      right: 5px;
+    }
+
+    #cardMsg {
+      height: 25px;
+      padding: 5px 10px;
+      float: left;
+      width: 150px;
+    }
+
+
+    #send {
+      font-weight: bold;
+      font-size: 20px;
+      float: left;
+      width: 90px;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>Send To Google Glass</h1>
+<fieldset id='fields'>
+  <label for='cardMsg'>
+    <input type='text' value='' placeholder='Paste text here...' id='cardMsg'/>
+  </label>
+  <button id='send'>Send</button>
+</fieldset>
+
+<button id="help">?</button>
+
+<!-- build:js scripts/popup.js -->
+<script src='scripts/popup.js'></script>
+<!-- endbuild -->
+</body>
 </html>
