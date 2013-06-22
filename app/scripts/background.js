@@ -6,16 +6,6 @@ var API = {
   INSERT: 'https://www.googleapis.com/mirror/v1/timeline'
 };
 
-var card = {
-  menuItems: [
-    {
-      action: "READ_ALOUD"
-    }
-  ],
-  notification: {
-    level: "DEFAULT"
-  }
-};
 
 var googleAuth = new OAuth2('google', {
   client_id: CONFIG.CLIENT_ID,
@@ -24,6 +14,17 @@ var googleAuth = new OAuth2('google', {
 });
 
 function sendCard(content, type, cb) {
+  var card = {
+    menuItems: [
+      {
+        action: "READ_ALOUD"
+      }
+    ],
+    notification: {
+      level: "DEFAULT"
+    }
+  };
+
   if (type === 'image' && content.length > 0) {
     card.html = '<article class="photo"><img src="' + content + '" width="100%" height="100%"><div class="photo-overlay"/></article>';
   } else if (type === 'text' && content.length > 0) {
@@ -54,14 +55,7 @@ function sendCard(content, type, cb) {
   xhr.setRequestHeader('Authorization', 'OAuth ' + googleAuth.getAccessToken());
 
   xhr.send(JSON.stringify(card));
-  //fields.className = 'animated bounceOut';
-  //document.getElementById('cardMsg').value = '';
 }
-
-
-chrome.browserAction.onClicked.addListener(function (tab) {
-  console.log('dasdasd')
-});
 
 
 // A generic onclick callback function.
