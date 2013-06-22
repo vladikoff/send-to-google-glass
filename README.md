@@ -18,6 +18,11 @@ __[Download 'Send to Google Glass' from the Chrome Web store](https://chrome.goo
   * Fill it out with your API access keys from Google's API console
 * Load unpacked extension
 
+## Version History
+
+* 0.0.4 (June 22, 2013) - Adding more menu actions to cards: Share, Delete and Pin
+* 0.0.3 - Fixing card push bugs
+* 0.0.2 - Released
 
 ## License
 

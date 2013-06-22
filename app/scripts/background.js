@@ -18,6 +18,15 @@ function sendCard(content, type, cb) {
     menuItems: [
       {
         action: "READ_ALOUD"
+      },
+      {
+        action: "DELETE"
+      },
+      {
+        action: "TOGGLE_PINNED"
+      },
+      {
+        action: "SHARE"
       }
     ],
     notification: {
