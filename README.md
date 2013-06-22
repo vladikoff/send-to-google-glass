@@ -28,7 +28,7 @@ Features include:
 
 ## Version History
 
-* 0.0.4 (June 22, 2013) - Adding more menu actions to cards: Share, Delete and Pin
+* 0.1.0 (June 22, 2013) - Adding more menu actions to cards: Share, Delete and Pin
 * 0.0.3 - Fixing card push bugs
 * 0.0.2 - Released
 
