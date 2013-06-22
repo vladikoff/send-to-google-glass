@@ -7,6 +7,11 @@ A Google Chrome Extension that let's you send text notes and images to your Goog
 
 __[Download 'Send to Google Glass' from the Chrome Web store](https://chrome.google.com/webstore/detail/send-to-google-glass/ifhgjbjejfocglfphkdecifccicemfll)__
 
+Features include:
+* Quick share via the browser icon
+* Select some text, right click and send it to your device. You can also make Glass read the snippets.
+* Right click on an image and send it to Google Glass!
+
 ****
 
 ![](http://v14d.com/send-to-glass-screen.png)
