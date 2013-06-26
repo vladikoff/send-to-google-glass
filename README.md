@@ -28,6 +28,10 @@ Features include:
 
 ## Version History
 
+* 0.1.1 (June 25, 2013) -
+  * Popup now sends images if you paste an image url.
+  * Card actions rearranged based on community feedback.
+  * Updated text limit. Allows you to send huge text articles. Perfect for the 'Read Aloud' feature.
 * 0.1.0 (June 22, 2013) - Adding more menu actions to cards: Share, Delete and Pin
 * 0.0.3 - Fixing card push bugs
 * 0.0.2 - Released

@@ -6,7 +6,6 @@ var API = {
   INSERT: 'https://www.googleapis.com/mirror/v1/timeline'
 };
 
-
 var googleAuth = new OAuth2('google', {
   client_id: CONFIG.CLIENT_ID,
   client_secret: CONFIG.CLIENT_SECRET,
@@ -20,13 +19,13 @@ function sendCard(content, type, cb) {
         action: "READ_ALOUD"
       },
       {
-        action: "DELETE"
+        action: "SHARE"
       },
       {
         action: "TOGGLE_PINNED"
       },
       {
-        action: "SHARE"
+        action: "DELETE"
       }
     ],
     notification: {
@@ -36,6 +35,8 @@ function sendCard(content, type, cb) {
 
   if (type === 'image' && content.length > 0) {
     card.html = '<article class="photo"><img src="' + content + '" width="100%" height="100%"><div class="photo-overlay"/></article>';
+    card.text = content;
+    card.speakableText = '';
   } else if (type === 'text' && content.length > 0) {
     card.text = content;
   } else {
