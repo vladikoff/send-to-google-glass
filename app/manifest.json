@@ -1,12 +1,15 @@
 {
   "name": "__MSG_appName__",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "permissions": [
     "contextMenus",
     "https://accounts.google.com/o/oauth2/token",
     "https://www.googleapis.com/"
+  ],
+  "web_accessible_resources": [
+    "oauth2/oauth2.html"
   ],
   "icons": {
     "16": "images/icon-16.png",
@@ -28,8 +31,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://www.google.com/robots.txt*"],
-      "js": ["oauth2/oauth2_inject.js"],
+      "matches": [
+        "http://www.google.com/robots.txt*"
+      ],
+      "js": [
+        "oauth2/oauth2_inject.js"
+      ],
       "run_at": "document_start"
     }
   ]
