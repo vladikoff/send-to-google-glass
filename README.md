@@ -27,7 +27,7 @@ Features include:
 * Load unpacked extension
 
 ## Version History
-
+* 0.1.4 (November 19, 2013) - Fixes Authentication issues
 * 0.1.1 (June 25, 2013) -
   * Popup now sends images if you paste an image url.
   * Card actions rearranged based on community feedback.
